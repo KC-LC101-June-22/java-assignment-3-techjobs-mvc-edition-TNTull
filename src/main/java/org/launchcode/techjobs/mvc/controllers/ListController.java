@@ -1,3 +1,5 @@
+// Teresa Tull worked on this on 10-30-2022
+
 package org.launchcode.techjobs.mvc.controllers;
 
 
@@ -17,18 +19,24 @@ import java.util.HashMap;
  */
 @Controller
 @RequestMapping(value = "list")
-public class ListController {
+public class ListController extends TechJobsController {
 
-    static HashMap<String, String> columnChoices = new HashMap<>();
+    //moved for bonus
+//    static HashMap<String, String> columnChoices = new HashMap<>();
+
     static HashMap<String, Object> tableChoices = new HashMap<>();
 
     public ListController () {
-        columnChoices.put("all", "All");
-        columnChoices.put("employer", "Employer");
-        columnChoices.put("location", "Location");
-        columnChoices.put("positionType", "Position Type");
-        columnChoices.put("coreCompetency", "Skill");
 
+        //moved for bonus
+//        columnChoices.put("all", "All");
+//        columnChoices.put("employer", "Employer");
+//        columnChoices.put("location", "Location");
+//        columnChoices.put("positionType", "Position Type");
+//        columnChoices.put("coreCompetency", "Skill");
+
+//      this is one way to list all jobs and the other is in list.html (I kept the other one)
+//      tableChoices.put("all", "View All");
         tableChoices.put("employer", JobData.getAllEmployers());
         tableChoices.put("location", JobData.getAllLocations());
         tableChoices.put("positionType", JobData.getAllPositionTypes());

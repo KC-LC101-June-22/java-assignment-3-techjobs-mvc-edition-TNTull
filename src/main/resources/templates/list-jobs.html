@@ -1,3 +1,5 @@
+<!-- Teresa Tull worked on this on 10-30-2022 -->
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
@@ -11,6 +13,8 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
+
+    <p th:replace = "fragments :: searchResultsTable"></p>
 
 </div>
 

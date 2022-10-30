@@ -1,3 +1,5 @@
+// Teresa Tull worked on this on 10-30-2022
+
 package org.launchcode.techjobs.mvc.controllers;
 
 import org.springframework.stereotype.Controller;
@@ -11,7 +13,7 @@ import java.util.HashMap;
  * Created by LaunchCode
  */
 @Controller
-public class HomeController {
+public class HomeController extends TechJobsController {
 
     @GetMapping(value = "")
     public String index(Model model) {

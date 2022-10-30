@@ -1,3 +1,4 @@
+
 .body-content {
     margin-top: 72px;
 }
@@ -8,9 +9,10 @@ td, th {
 
 th {
     text-align: center;
+    color: green;
 }
 
-td {
+td  {
     vertical-align: top;
 }
 
@@ -31,6 +33,8 @@ table.job-listing {
 
 table.job-listing td:first-child {
     font-weight: bold;
+    font-style: italic;
+    color: purple;
 }
 
 table.job-listing td:last-child {
@@ -39,6 +43,7 @@ table.job-listing td:last-child {
 
 label {
     margin-right: 15px;
+
 }
 
 .centered {
