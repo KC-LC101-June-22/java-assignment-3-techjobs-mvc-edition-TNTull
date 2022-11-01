@@ -1,3 +1,5 @@
+<!-- Teresa Tull worked on this on 10-30-2022 -->
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
 
@@ -25,6 +27,44 @@
                 </ul>
             </div>
         </div>
+    </div>
+
+    <div th:fragment="searchResultsTable">
+        <table th:each="job: ${jobs}" class="job-listing">
+            <tr>
+                <td>ID</td>
+                <td th:text="${job.getId()}"></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td th:text="${job.getName}"></td>
+            </tr>
+            <tr>
+                <td>Employer</td>
+                <td th:text="${job.getEmployer}"></td>
+                <!-- <td><a th:href="@{/list/jobs(column=employer,value=${job.getEmployer()})}" th:text="${job.getEmployer()}"></a></td> -->
+                <!-- for bonus mission but it is not DRY, so I left the original -->
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td th:text="${job.getLocation}"></td>
+                <!-- <td><a th:href="@{/list/jobs(column=location,value=${job.getLocation()})}" th:text="${job.getLocation()}"></a></td> -->
+                <!-- for bonus mission but it is not DRY, so I left the original -->
+            </tr>
+            <tr>
+                <td>Position Type</td>
+                <td th:text="${job.getPositionType}"></td>
+                <!-- <td><a th:href="@{/list/jobs(column=positionType,value=${job.getPositionType()})}" th:text="${job.getPositionType()}"></a></td> -->
+                <!-- for bonus mission but it is not DRY, so I left the original -->
+            </tr>
+            <tr>
+                <td>Skill</td>
+                <td th:text="${job.getCoreCompetency}"></td>
+                <!-- <td><a th:href="@{/list/jobs(column=coreCompetency,value=${job.getCoreCompetency()})}" th:text="${job.getCoreCompetency()}"></a></td> -->
+                <!-- for bonus mission but it is not DRY, so I left the original -->
+            </tr>
+
+        </table>
     </div>
 
 </body>

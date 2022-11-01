@@ -1,3 +1,5 @@
+<!-- Teresa Tull worked on this on 10-30-2022 -->
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
@@ -20,23 +22,26 @@
                         name="searchType"
                         th:id="${column.key}"
                         th:value="${column.key}"
-                        th:checked="${column.key == 'all'}"/>
-                <label th:for="${column.key}" th:text="${column.value}"></label>
-            </span>
+                        th:checked="${column.key == selectedSearchType  || column.key == 'all'}"/>
 
-        </p>
+        <label th:for="${column.key}" th:text="${column.value}"></label>
+    </span>
 
-        <p>
-            <label for="searchTerm">Keyword:</label>
-            <input type="text" name="searchTerm" id="searchTerm" />
-        </p>
+</p>
 
-        <input type="submit" value="Search" />
-    </form>
+<p>
+    <label for="searchTerm">Keyword:</label>
+    <input type="text" name="searchTerm" id="searchTerm" />
+</p>
 
-    <hr />
+<input type="submit" value="Search" />
+</form>
 
-    <!-- TODO #4 - Loop over the search results to display all job fields. -->
+<hr />
+
+<!-- TODO #4 - Loop over the search results to display all job fields. -->
+
+    <p th:replace = "fragments :: searchResultsTable"></p>
 
 </div>
 
